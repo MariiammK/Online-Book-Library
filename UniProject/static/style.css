@@ -1,0 +1,21 @@
+body{
+    background-color: lightsteelblue;
+    color: mediumvioletred;
+    
+
+}
+
+h1{
+    color: deeppink;
+}
+
+.info{
+    color: Green;
+    font-weight: bold;
+
+}
+
+.error{
+    color: crimson;
+    font-weight: bold;
+}

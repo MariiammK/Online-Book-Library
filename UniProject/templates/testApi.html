@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>books</title>
+{% endblock %}
+
+{% block content %}
+    <h2>წიგნების ჩამონათვალი</h2>
+    <p>Parsek1-ის კომიქსები</p>
+
+
+    <table class="table table-success table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">კომიქსის სათაური</th>
+      <th scope="col">ფასი</th>
+      <th scope="col">სტატუსი</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for i in all_comics %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ i.title }}</td>
+      <td>{{ i.price }}</td>
+      <td>{{ i.status }}</td>
+    </tr>
+
+  {% endfor %}
+
+
+  </tbody>
+</table>
+{% endblock %}

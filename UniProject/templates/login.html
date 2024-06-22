@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>login</title>
+{% endblock %}
+
+{% block content %}
+
+<form method="post" style="width: 25%; margin: 30px">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">ელ-ფოსტა</label>
+    <input type="email" name = "email" class="form-control" >
+
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">პაროლი</label>
+    <input type="password" name = "password" class="form-control" >
+  </div>
+
+  <button type="submit" class="btn btn-primary">დასრულება</button>
+</form>
+
+    {% with messages=get_flashed_messages(with_categories=True) %}
+        {% for i, j in messages %}
+            <p class="{{ i }}">{{ j }}</p>
+        {% endfor %}
+    {% endwith %}
+
+
+{% endblock %}
